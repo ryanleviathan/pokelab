@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "pokemonhollow";
+  src: url("./font/ph.ttf");
+  font-family: "pokemonsolid";
+  src: url("./font/ps.ttf");
+  }
+
+@font-face {
+  font-family: "pokemonhollow";
+  src: url("./font/ph.ttf");
+  }
+
+div {
+  background-color: black;
+  color: yellow;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'pokemonhollow';
+}
+
+.header-logo {
+  width: 800px;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 20px;
+  font-family: 'pokemonsolid';
+  font-size: smaller;
+}
