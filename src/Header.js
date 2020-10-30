@@ -7,7 +7,7 @@ export default class Header extends Component {
             <header>
                 <img className='header-logo' src={logo} alt="pokemon-logo" />
                 <h1>
-                    Welcome to your PokeDex!
+                    Welcome to your Pokédex!
                 </h1>
             </header>
         )

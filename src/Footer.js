@@ -5,7 +5,7 @@ export default class Footer extends Component {
         return (
             <div className="footer">
                 <p>Pokédex by ryanleviathan</p>
-                <p>Thank you https://pokeapi.co/</p>
+                <p>Thank you  https://alchemy-pokedex.herokuapp.com</p>
             </div>
         )
     }
