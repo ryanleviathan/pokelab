@@ -9,7 +9,6 @@ import Header from './Header.js';
 import Home from './Home.js';
 import Pokedex from './Pokedex.js';
 import Footer from './Footer.js';
-import FetchPage from './FetchPage.js';
 // import FetchPage from './FetchPage.js';
 
 export default class App extends Component {
@@ -28,11 +27,6 @@ export default class App extends Component {
                             path="/pokedex" 
                             exact
                             render={(routerProps) => <Pokedex {...routerProps} />} 
-                        />
-                        <Route 
-                            path="/fetch" 
-                            exact
-                            render={(routerProps) => <FetchPage {...routerProps} />} 
                         />
                     </Switch>
                     <Footer />
