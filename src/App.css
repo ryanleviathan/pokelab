@@ -36,8 +36,8 @@ h1 {
 .home-page {
   margin-top: 150px;
   margin-bottom: 100px;
+  letter-spacing: 1.5px;
   font-family: 'pokemonsolid';
-  font-weight: inherit;
 }
 
 .home-button {
@@ -45,10 +45,12 @@ h1 {
   padding-right: 10px;
   padding-bottom: 6px;
   font-family: 'pokemonsolid';
+  font-size: 1em;
   background-color: yellow;
   border-radius: 15px;
   border-style: outset;
   margin-top: 50px;
+  color: dodgerblue;
 }
 
 button:focus {
