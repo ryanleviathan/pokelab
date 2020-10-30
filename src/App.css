@@ -32,3 +32,30 @@ h1 {
   font-family: 'pokemonsolid';
   font-size: smaller;
 }
+
+.home-page {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-family: 'pokemonsolid';
+  font-weight: inherit;
+}
+
+.home-button {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  font-family: 'pokemonsolid';
+  background-color: yellow;
+  border-radius: 15px;
+  border-style: outset;
+  margin-top: 50px;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 5px rgb(160, 160, 0);
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 6, 0.5);
+}

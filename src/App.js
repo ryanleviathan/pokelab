@@ -6,6 +6,7 @@ import './App.css';
 //   Switch,
 // } from 'react-router-dom';
 import Header from './Header.js';
+import Home from './Home.js';
 import Footer from './Footer.js';
 // import FetchPage from './FetchPage.js';
 
@@ -16,6 +17,7 @@ export default class App extends Component {
               <>
                 {/* <Router> */}
                     <Header />
+                    <Home />
                     {/* <Switch>
                     <Route 
                         path="/" 
