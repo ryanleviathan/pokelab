@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class Home extends Component {
     render() {
@@ -14,9 +14,9 @@ export default class Home extends Component {
                 <p>
                     Explore and enjoy!
                 </p>
-                <Link to="/pokedex">
+                <NavLink to="/pokedex">
                 <button className="home-button">Continue</button>
-                </Link>
+                </NavLink>
             </div>
         )
     }
