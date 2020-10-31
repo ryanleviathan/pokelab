@@ -51,10 +51,12 @@ export default class Pokedex extends Component {
                 </div>
                 <div className="left-column">
                     <select onChange={this.handleCategory} className="dropdown">
+                        <option value="">Category Selection!</option>
                         <option value="attack">Attack</option>
                         <option value="defense">Defense</option>
                     </select>
                     <select onChange={this.handleSort} className="dropdown">
+                        <option value="">Sorting Selection!</option>
                         <option value="asc">Ascending</option>
                         <option value="desc">Descending</option>
                     </select>
