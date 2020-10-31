@@ -54,12 +54,26 @@ h1 {
   color: dodgerblue;
 }
 
+.home-button:hover {
+  background-color: dodgerblue;
+  color: yellow;
+}
+
 button:focus {
   outline: none;
   box-shadow: inset 0px 0px 8px rgb(215, 225, .8);
 }
 
-.home-button:hover {
+.button {
+  font-family: 'pokemonsolid';
+  font-size: .75em;
+  background-color: yellow;
+  border-radius: 15px;
+  border-style: outset;
+  color: dodgerblue;
+}
+
+.button:hover {
   background-color: dodgerblue;
   color: yellow;
 }
@@ -67,4 +81,28 @@ button:focus {
 .poke-display {
   display: flex;
   flex-direction: row;
+}
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio]:checked + img {
+  box-shadow: inset 0px 0px 8px rgb(215, 225, .8);
+}
+
+.poke-img {
+  width: 150px;
+}
+
+.dropdown {
+  font-family: 'pokemonsolid';
+  font-size: .75em;
+  background-color: yellow;
+  border-radius: 15px;
+  border-style: outset;
+  color: dodgerblue;
 }
