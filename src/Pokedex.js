@@ -42,7 +42,6 @@ export default class Pokedex extends Component {
     }
 
     render() {
-        console.log(this.state.category)
         return (
             <>
             <div>
