@@ -17,7 +17,10 @@ export default class Pokedex extends Component {
     fetchPokemon = async () => {
         const response = await fetch.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.pageNumber}
         &perPage=20&pokemon=${this.state.pokemon}&sort=${this.state.category}&direction=${this.state.sort}`)
-        this.setState({ pokemonArray: response.body.results })
+        this.setState({ 
+            pokemonArray: response.body.results,
+            count: response.body.count
+        })
     }
     // mounting fetched data
     componentDidMount = async () => {
@@ -75,15 +78,22 @@ export default class Pokedex extends Component {
                 </div>
                 <div className="left-column">
                     {
-                        this.state.pageNumber !== 1 && <button className="button" onClick={this.handleDecrem}>
+                        this.state.pageNumber !== 1 && 
+                        <button className="button" onClick={this.handleDecrem}>
                         Prev
                     </button>
                     }
-                    <button className="button" onClick={this.handleIncrem}>
-                        Next
-                    </button>
+                    {
+                        this.state.pageNumber !== Math.ceil(this.state.count / 20) && 
+                        <button className="button" onClick={this.handleIncrem}>
+                            Next
+                        </button>
+                    }
                     <div>
-                        Current page: {this.state.pageNumber}
+                        Current page: {this.state.pageNumber} of {Math.ceil(this.state.count / 20)}
+                    </div>
+                    <div>
+                        Number of Pokémon in query: {this.state.count}
                     </div>
                 </div>
                 {
