@@ -39,7 +39,7 @@ export default class Detail extends Component {
                 : this.state.pokemonArray.map(pokemon =>
                     <div key={pokemon.render} className="right-column">
                         <h3>Name: {pokemon.pokemon}</h3>
-                        <img className="poke-img" src={pokemon.url_image} alt={pokemon.name} />
+                        <img src={pokemon.url_image} alt={pokemon.name} />
                         <p className="poke-t1">Type: {pokemon.type_1}</p>
                         <p className="poke-t2">Type 2: {pokemon.type_2}</p>
                         <p className="poke-a1">Ability: {pokemon.ability_1}</p>

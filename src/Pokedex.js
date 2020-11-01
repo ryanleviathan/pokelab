@@ -10,11 +10,13 @@ export default class Pokedex extends Component {
         pokemonArray: [],
         pokemon: '',
         category: '',
-        sort: ''
+        sort: '',
+        pageNumber: 1
     }
     // fetching from API
     fetchPokemon = async () => {
-        const response = await fetch.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.pokemon}&sort=${this.state.category}&direction=${this.state.sort}`)
+        const response = await fetch.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.pageNumber}
+        &perPage=20&pokemon=${this.state.pokemon}&sort=${this.state.category}&direction=${this.state.sort}`)
         this.setState({ pokemonArray: response.body.results })
     }
     // mounting fetched data
@@ -41,8 +43,17 @@ export default class Pokedex extends Component {
         this.fetchPokemon()
     }
 
+   handleIncrem = async () => {
+        await this.setState({ pageNumber: this.state.pageNumber + 1 })
+        await this.fetchPokemon()
+   }
+
+   handleDecrem = async () => {
+        await this.setState({ pageNumber: this.state.pageNumber - 1 })
+        await this.fetchPokemon()
+}
+
     render() {
-        console.log(this.state.category)
         return (
             <>
             <div>
@@ -61,6 +72,19 @@ export default class Pokedex extends Component {
                         <option value="asc">Ascending</option>
                         <option value="desc">Descending</option>
                     </select>
+                </div>
+                <div className="left-column">
+                    {
+                        this.state.pageNumber !== 1 && <button className="button" onClick={this.handleDecrem}>
+                        Prev
+                    </button>
+                    }
+                    <button className="button" onClick={this.handleIncrem}>
+                        Next
+                    </button>
+                    <div>
+                        Current page: {this.state.pageNumber}
+                    </div>
                 </div>
                 {
                 this.state.pokemonArray.length === 0
